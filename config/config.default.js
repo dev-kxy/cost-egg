@@ -13,8 +13,10 @@ module.exports = appInfo => {
   const config = exports = {
     mysql:{
       client: {
-        host: '121.89.207.81',
-        port: '3306',
+        host:'localhost',
+        port:'',
+        // host: '121.89.207.81',
+        // port: '3306',
         user: 'root',
         password: 'Kxy940831',
         database: 'cost'
