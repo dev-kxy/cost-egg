@@ -25,7 +25,7 @@ class UserService extends Service {
 
     async editUserInfo () {
       const { ctx, app } = this;
-      console.log('editUserInfo');
+      console.log('editUserInfo')
       // 通过 post 请求，在请求体中获取签名字段 signature
       const { signature = '', avatar = '' } = ctx.request.body
       try {
