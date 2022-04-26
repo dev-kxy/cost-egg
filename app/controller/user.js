@@ -2,8 +2,18 @@
 
 const Controller = require('egg').Controller;
 const defaultAvatar = 'http://s.yezgea02.com/1615973940679/WeChat77d6d2ac093e247c361f0b8a7aeb6c2a.png';
-
+/**
+ *  笔记路由note
+ * @Controller 
+ */
 class UserController extends Controller {
+    /**
+     * @summary 注册
+     * @description 注册
+     * @Router post /api/user/register
+     * @request body registParams *body
+     * @response 200 testResponse 
+    * */
     async register(){
         const { ctx } = this;
         const { username, password } = ctx.request.body;
@@ -44,7 +54,13 @@ class UserController extends Controller {
             }
           }
     }
-
+    /**
+     * @summary 登陆
+     * @description 登陆
+     * @Router post /api/user/login
+     * @request body loginParams *body
+     * @response 200 testResponse 
+    * */
     async login(){
         const { ctx, app } = this;
         const { username, password } = ctx.request.body;
@@ -93,7 +109,13 @@ class UserController extends Controller {
             }
         }
     }
-
+    /**
+     * @summary 登陆
+     * @description 登陆
+     * @Router get /api/user/getUserInfo
+     * @request header string authorization token值
+     * @response 200 userInfoResponse 
+    * */
     async getUserInfo(){
         const { ctx, app } = this;
         const token = ctx.request.header.authorization;

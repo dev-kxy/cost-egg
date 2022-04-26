@@ -13,8 +13,8 @@ module.exports = appInfo => {
   const config = exports = {
     mysql:{
       client: {
-        host:'localhost',
-        // host: '121.89.207.81',
+        // host:'localhost',
+        host: '121.89.207.81',
         port: '3306',
         user: 'root',
         password: 'Kxy940831',
@@ -54,6 +54,19 @@ module.exports = appInfo => {
   config.multipart = {
     mode:'file'
   }
+  config.swaggerdoc = {
+    dirScanner: './app/controller', //插件扫描的文档路径
+    apiInfo: {
+      title: 'swagger文档',
+      description: 'egg.js swagger-demo文档',
+      version: '1.0.0',
+    },
+    consumes: ['application/json','multipart/form-data'], // 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html
+    produces: ['application/json','multipart/form-data'], // 指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回
+    schemes: ['http', 'https'],
+    routerMap: true, // 是否自动生成route
+    enable: true,
+  };
   return {
     ...config,
     ...userConfig,
