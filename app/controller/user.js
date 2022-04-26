@@ -110,8 +110,8 @@ class UserController extends Controller {
         }
     }
     /**
-     * @summary 登陆
-     * @description 登陆
+     * @summary 获取用户信息
+     * @description 获取用户信息
      * @Router get /api/user/getUserInfo
      * @request header string authorization token值
      * @response 200 userInfoResponse 

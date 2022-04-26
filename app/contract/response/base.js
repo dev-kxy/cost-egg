@@ -12,7 +12,6 @@ module.exports = {
   },
   userInfoResponse:{
       code:{type:'number'},
-      message: { type: 'string' },
-      data: { type: 'object' }
+      message: { type: 'string' }
   }
 };
