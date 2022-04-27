@@ -9,12 +9,12 @@ const Controller = require('egg').Controller;
 
 class UploadController extends Controller {
   async upload() {
-    const { ctx } = this
+    const { ctx, app } = this;
+    const prefix = app.config.cluster.listen.host+':'+app.config.cluster.listen.port;
     // 需要前往 config/config.default.js 设置 config.multipart 的 mode 属性为 file
     let file = ctx.request.files[0]
     // 声明存放资源的路径
     let uploadDir = ''
-  
     try {
       // ctx.request.files[0] 表示获取第一个文件，若前端上传多个文件则可以遍历这个数组对象
       let f = fs.readFileSync(file.filepath)
@@ -36,7 +36,7 @@ class UploadController extends Controller {
     ctx.body = {
       code: 200,
       msg: '上传成功',
-      data: uploadDir.replace('app', ''),
+      data: prefix + uploadDir.replace('app', ''),
     }
   }
 }

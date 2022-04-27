@@ -73,7 +73,7 @@ module.exports = appInfo => {
       path: '',
       port: 7001,
       hostname: '0.0.0.0',
-      host:'http://localhost'
+      host:'http://121.89.207.81'
     }
 };
   return {

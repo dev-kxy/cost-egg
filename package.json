@@ -29,7 +29,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --port=7001 --daemon --title=egg-server-first-egg --ignore-stderr",
+    "start": "egg-scripts start --env=prod --daemon --title=egg-server-first-egg --ignore-stderr",
     "stop": "egg-scripts stop --title=egg-server-first-egg",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
