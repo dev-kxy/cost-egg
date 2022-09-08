@@ -2,9 +2,9 @@
 
 /** @type Egg.EggPlugin */
 module.exports = {
-  mysql:{
-    enable:true,
-    package:'egg-mysql'
+  mysql: {
+    enable: true,
+    package: 'egg-mysql',
   },
   cors: {
     enable: true,
@@ -12,10 +12,10 @@ module.exports = {
   },
   jwt: {
     enable: true,
-    package: 'egg-jwt'
+    package: 'egg-jwt',
   },
-  swaggerdoc:{
-    enable:true,
-    package:'egg-swagger-doc'
-  }
+  swaggerdoc: {
+    enable: true,
+    package: 'egg-swagger-doc',
+  },
 };
